@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className=' absolute  z-50 '>
       <div className=' w-screen px-20 flex items-center justify-between h-16  text-white'>
         <div className='flex items-center space-x-2'>
-          <div className='bg-white flex  rounded-full m-auto'>
+          <div className='bg-white flex w-10 h-10  rounded-full m-auto'>
             <Image
               src='/../public/melofy-icon.png'
               alt='Logo'
@@ -25,7 +25,7 @@ const Navbar = () => {
               height={80}
             />
           </div>
-          <h1 className=''>Melofy</h1>
+          <h1 className='text-xl font-bold'>Melofy</h1>
         </div>
         <div className='flex items-center'>
           {links.map(({ href, label, className }) => (
