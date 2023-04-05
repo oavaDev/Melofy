@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities{
-    .clipstyle{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
-    }
+    
     .clipstyleb{
         clip-path: polygon(0 0, 100% 32%, 100% 70%, 0% 100%);
     }
+    .clipstylemb{
+        clip-path: polygon(0 0, 100% 18%, 100% 88%, 0% 100%);
+    }
+    
 }
