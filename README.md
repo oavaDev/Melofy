@@ -1,7 +1,7 @@
 
 ## Gohar Frangyan's Melofy Design
 
-A web application inspired on (Gohar Frangyan)[https://www.behance.net/gallery/111850789/Melofy-Music-Platform-UIUX-Design] project idea 
+A web application inspired on [Gohar Frangyan](https://www.behance.net/gallery/111850789/Melofy-Music-Platform-UIUX-Design) project idea 
 ## Getting Started
 
 First, run the development server:
