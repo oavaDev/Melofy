@@ -25,7 +25,7 @@ const Navbar = () => {
     <>
       {isMounted && (
         <nav className=' absolute  z-50 '>
-          <div className=' w-screen px-20 flex items-center justify-between h-16  text-white'>
+          <div className=' w-screen px-10 sm:px-20 flex items-center justify-between h-16  text-white'>
             <div className='flex items-center space-x-2'>
               <div className='bg-white flex w-10 h-10  rounded-full m-auto'>
                 <Image
@@ -55,7 +55,7 @@ const Navbar = () => {
                 {links.map(({ href, label, className }) => (
                   <Link key={href} href={href}>
                     <label
-                      className={`mx-4 text-md hover:text-gray-300 ${
+                      className={` text-md hover:text-gray-300 ${
                         className || ''
                       }`}
                     >
