@@ -46,7 +46,7 @@ const Podcasts = () => {
   ];
 
   return (
-    <article className='w-screen flex flex-col md:flex-row md:gap-30 xl:gap-56  items-center justify-center bg-white h-screen  '>
+    <article className='w-screen flex flex-col md:flex-row md:gap-30 xl:gap-56 md:mt-0 mt-52 items-center justify-center bg-white h-screen  '>
       <aside className='h-80 flex flex-col  text-center items-center justify-around'>
         <span className='text-black text-5xl font-bold w-80'>Podcasts</span>
         <p>Listen more than music</p>
