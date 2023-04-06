@@ -52,7 +52,7 @@ const Collections = () => {
   return (
     <article className='w-screen bg-white h-screen  '>
       <div className='w-screen flex flex-col  bg-white h-screen gap-32   '>
-        <div className='flex flex-col justify-center items-center text-center md:text-start md:pl-28  md:justify-start md:items-start gap-8'>
+        <div className='flex flex-col justify-center items-center text-center md:text-center   md:justify-center md:items-center gap-8'>
           <p className='text-black text-5xl font-bold w-80 '>Collections</p>
           <p>Playlists tailored to your mood or genre</p>
         </div>
