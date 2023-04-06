@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import AdFree from '@/components/AdFree';
 import Offline from '@/components/Offline';
+import Charts from '@/components/Charts';
 export default function Home() {
   return (
     <main className={raleway.className}>
@@ -18,6 +19,9 @@ export default function Home() {
       </section>
       <section>
         <Offline />
+      </section>
+      <section>
+        <Charts />
       </section>
     </main>
   );

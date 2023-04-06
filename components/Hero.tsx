@@ -11,9 +11,8 @@ const Hero = () => {
           <Image
             priority
             src={IMAGE_URL}
-            layout='fill'
-            objectFit='cover'
-            objectPosition='center'
+            fill={true}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
             quality={100}
             alt='hero image'
           />
