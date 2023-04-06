@@ -10,6 +10,7 @@ const nextConfig = {
       'images.jamendo.com',
       'media.istockphoto.com',
       'assets.snapmuse.com',
+      'images.unsplash.com',
     ],
   },
 };
