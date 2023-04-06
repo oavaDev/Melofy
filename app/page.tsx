@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import AdFree from '@/components/AdFree';
 import Offline from '@/components/Offline';
 import Charts from '@/components/Charts';
+import Collections from '@/components/Collections';
 export default function Home() {
   return (
     <main className={raleway.className}>
@@ -22,6 +23,9 @@ export default function Home() {
       </section>
       <section>
         <Charts />
+      </section>
+      <section>
+        <Collections />
       </section>
     </main>
   );

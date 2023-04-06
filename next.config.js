@@ -4,7 +4,13 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['res.cloudinary.com', 'e-cdn-images.dzcdn.net'],
+    domains: [
+      'res.cloudinary.com',
+      'e-cdn-images.dzcdn.net',
+      'images.jamendo.com',
+      'media.istockphoto.com',
+      'assets.snapmuse.com',
+    ],
   },
 };
 
