@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
+import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [NavbarOpen, setNavbarOpen] = useState(false);
@@ -25,7 +26,12 @@ const Navbar = () => {
     <>
       {isMounted && (
         <nav className=' absolute  z-50 '>
-          <div className=' w-screen px-10 sm:px-20 flex items-center justify-between h-16  text-white'>
+          <div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 15 }}
+            className=' w-screen px-10 sm:px-20 flex items-center justify-between h-16  text-white'
+          >
             <div className='flex items-center space-x-2'>
               <div className='bg-white flex w-10 h-10  rounded-full m-auto'>
                 <Image
@@ -38,7 +44,7 @@ const Navbar = () => {
               <h1 className='text-xl font-bold'>Melofy</h1>
             </div>
             <div className={`${NavbarOpen && 'pt-40 '}  flex-col`}>
-              <div className='md:hidden flex flex-col'>
+              <div className='md:hidden flex flex-col items-end '>
                 <button onClick={() => setNavbarOpen(!NavbarOpen)}>
                   {NavbarOpen ? (
                     <IoMdClose size={30} color={'white'} />
@@ -47,23 +53,23 @@ const Navbar = () => {
                   )}
                 </button>
               </div>
-              <div
+              <ul
                 className={`flex items-center gap-5 ${
                   NavbarOpen ? 'flex-col' : 'hidden'
                 } md:flex`}
               >
                 {links.map(({ href, label, className }) => (
                   <Link key={href} href={href}>
-                    <label
+                    <li
                       className={` text-md hover:text-gray-300 ${
                         className || ''
                       }`}
                     >
                       {label}
-                    </label>
+                    </li>
                   </Link>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </nav>
