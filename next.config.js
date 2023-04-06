@@ -11,6 +11,10 @@ const nextConfig = {
       'media.istockphoto.com',
       'assets.snapmuse.com',
       'images.unsplash.com',
+      'pyxis.nymag.com',
+      'i.scdn.co',
+      'is1-ssl.mzstatic.com',
+      'e-cdns-images.dzcdn.net',
     ],
   },
 };

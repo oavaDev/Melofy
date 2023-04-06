@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 import { FaCrown } from 'react-icons/fa';
+import SeeMoreButton from './SeeMoreButton';
 const Charts = () => {
   interface songsI {
     id: number;
@@ -92,12 +93,7 @@ const Charts = () => {
             Melofy top charts
           </h5>
           <p>Listen popular tracks right now</p>
-          <a
-            href='/'
-            className='bg-black w-40 px-10 py-2  text-center rounded text-white'
-          >
-            See more
-          </a>
+          <SeeMoreButton />
         </aside>
       </div>
     </article>

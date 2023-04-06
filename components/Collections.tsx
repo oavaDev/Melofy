@@ -60,7 +60,7 @@ const Collections = () => {
           <div className='flex flex-wrap gap-4 justify-center md:grid md:grid-cols-4 md:gap-4 '>
             {GENRES.map((genre: genre, i: number) => (
               <div
-                className={`relative w-52 h-52  order-${i}`}
+                className={`relative w-32 h-32 md:w-52 md:h-52   order-${i}`}
                 key={genre.name}
               >
                 <Image
