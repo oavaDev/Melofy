@@ -56,7 +56,7 @@ const Collections = () => {
           <p className='text-black text-5xl font-bold w-80 '>Collections</p>
           <p>Playlists tailored to your mood or genre</p>
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center flex-col gap-6 justify-center'>
           <div className='flex flex-wrap gap-4 justify-center md:grid md:grid-cols-4 md:gap-4 '>
             {GENRES.map((genre: genre, i: number) => (
               <div
@@ -77,14 +77,14 @@ const Collections = () => {
               </div>
             ))}
           </div>
-        </div>
-        <div className='text-center '>
-          <a
-            href='/'
-            className='bg-black w-40 px-16 py-4  text-center rounded text-white'
-          >
-            See more
-          </a>
+          <div className='text-center '>
+            <a
+              href='/'
+              className='bg-black w-40 px-16 py-4  text-center rounded text-white'
+            >
+              See more
+            </a>
+          </div>
         </div>
       </div>
     </article>
