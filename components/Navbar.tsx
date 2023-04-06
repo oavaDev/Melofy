@@ -24,56 +24,58 @@ const Navbar = () => {
 
   return (
     <>
-      {isMounted && (
-        <nav className=' absolute  z-50 '>
-          <div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 15 }}
-            className=' w-screen px-10 sm:px-20 flex items-center justify-between h-16  text-white'
-          >
-            <div className='flex items-center space-x-2'>
-              <div className='bg-white flex w-10 h-10  rounded-full m-auto'>
-                <Image
-                  src='https://res.cloudinary.com/dj80e8qqp/image/upload/v1680730218/logo-melofy_yyz9vt.png'
-                  alt='Logo'
-                  width={50}
-                  height={80}
-                />
+      <AnimatePresence>
+        {isMounted && (
+          <nav className=' absolute  z-50 '>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 15 }}
+              className=' w-screen px-10 sm:px-20 flex items-center justify-between h-16  text-white'
+            >
+              <div className='flex items-center space-x-2'>
+                <div className='bg-white flex w-10 h-10  rounded-full m-auto'>
+                  <Image
+                    src='https://res.cloudinary.com/dj80e8qqp/image/upload/v1680730218/logo-melofy_yyz9vt.png'
+                    alt='Logo'
+                    width={50}
+                    height={80}
+                  />
+                </div>
+                <h1 className='text-xl font-bold'>Melofy</h1>
               </div>
-              <h1 className='text-xl font-bold'>Melofy</h1>
-            </div>
-            <div className={`${NavbarOpen && 'pt-40 '}  flex-col`}>
-              <div className='md:hidden flex flex-col items-end '>
-                <button onClick={() => setNavbarOpen(!NavbarOpen)}>
-                  {NavbarOpen ? (
-                    <IoMdClose size={30} color={'white'} />
-                  ) : (
-                    <IoMdMenu size={30} color={'white'} />
-                  )}
-                </button>
+              <div className={`${NavbarOpen && 'pt-40 '}  flex-col`}>
+                <div className='md:hidden flex flex-col items-end '>
+                  <button onClick={() => setNavbarOpen(!NavbarOpen)}>
+                    {NavbarOpen ? (
+                      <IoMdClose size={30} color={'white'} />
+                    ) : (
+                      <IoMdMenu size={30} color={'white'} />
+                    )}
+                  </button>
+                </div>
+                <ul
+                  className={`flex items-center gap-5 ${
+                    NavbarOpen ? 'flex-col' : 'hidden'
+                  } md:flex`}
+                >
+                  {links.map(({ href, label, className }) => (
+                    <Link key={href} href={href}>
+                      <li
+                        className={` text-md hover:text-gray-300 ${
+                          className || ''
+                        }`}
+                      >
+                        {label}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
               </div>
-              <ul
-                className={`flex items-center gap-5 ${
-                  NavbarOpen ? 'flex-col' : 'hidden'
-                } md:flex`}
-              >
-                {links.map(({ href, label, className }) => (
-                  <Link key={href} href={href}>
-                    <li
-                      className={` text-md hover:text-gray-300 ${
-                        className || ''
-                      }`}
-                    >
-                      {label}
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </nav>
-      )}
+            </motion.div>
+          </nav>
+        )}
+      </AnimatePresence>
     </>
   );
 };
